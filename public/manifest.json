@@ -1,0 +1,15 @@
+{
+  "name": "BulkRenameTool - Free Online File Renamer",
+  "short_name": "BulkRenameTool",
+  "description": "Rename hundreds of files at once in your browser",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,98 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Script from 'next/script';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://bulkrenametool.com'),
+  title: {
+    default: 'Bulk Rename Files Online Free | BulkRenameTool',
+    template: '%s | BulkRenameTool'
+  },
+  description: 'Free online bulk file renamer. Add prefix, suffix, auto-number, find & replace in 100s of files instantly. No upload. No signup. Works in browser.',
+  keywords: [
+    'bulk rename files online', 'batch rename tool', 
+    'rename multiple files', 'bulk file renamer',
+    'online file renamer free', 'rename files in bulk',
+    'batch rename files free', 'rename 100 files at once'
+  ],
+  authors: [{ name: 'BulkRenameTool' }],
+  creator: 'BulkRenameTool',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://bulkrenametool.com',
+    siteName: 'BulkRenameTool',
+    title: 'Bulk Rename Files Online — Free, Fast & Private',
+    description: 'Rename hundreds of files at once in your browser. No software, no signup, 100% free.',
+    images: [{
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'BulkRenameTool - Free Online Bulk File Renamer'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bulk Rename Files Online — Free & Private',
+    description: 'Rename 100s of files at once in your browser. No upload needed.',
+    images: ['/og-image.png']
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  verification: {
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+  },
+  alternates: {
+    canonical: 'https://bulkrenametool.com'
+  },
+  manifest: '/manifest.json'
+};
+
+export default function RootLayout({children}: {children: React.ReactNode}) {
+  return (
+    <html lang="en" className={`${inter.variable} font-sans`} suppressHydrationWarning>
+      <body className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 flex flex-col transition-colors duration-200">
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
+        {/* Placeholder for Google AdSense - add script tag here in the future if needed */}
+        {/* <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXX" crossOrigin="anonymous" strategy="afterInteractive" /> */}
+        
+        <ThemeProvider>
+          <Header />
+          <main className="flex-grow flex flex-col">{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
