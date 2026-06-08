@@ -1,6 +1,9 @@
 import React from 'react';
 import { FileItem } from '@/types';
-import { FileIcon, Trash2 } from 'lucide-react';
+import { FileIcon, Trash2, AlertTriangle } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
 
 type PreviewProps = {
   files: FileItem[];
@@ -10,12 +13,14 @@ type PreviewProps = {
 export default function Preview({ files, onRemove }: PreviewProps) {
   if (files.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center p-8 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700 h-full min-h-[300px]">
-        <FileIcon className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
-        <p className="text-gray-500 dark:text-gray-400 text-sm">
-          No files selected yet. Drop some files to see the preview.
-        </p>
-      </div>
+      <Card className="flex flex-col items-center justify-center p-8 h-full min-h-[300px] border-dashed bg-gray-50/50 dark:bg-gray-800/25">
+        <CardContent className="flex flex-col items-center justify-center py-6">
+          <FileIcon className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
+            No files selected yet. Drop some files to see the preview.
+          </p>
+        </CardContent>
+      </Card>
     );
   }
 
@@ -26,40 +31,40 @@ export default function Preview({ files, onRemove }: PreviewProps) {
   }, {} as Record<string, number>);
 
   return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm flex flex-col h-full max-h-[600px]">
-      <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex justify-between items-center">
-        <h3 className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+    <Card className="flex flex-col h-full max-h-[600px] overflow-hidden shadow-sm">
+      <CardHeader className="px-4 py-3 border-b bg-gray-50 dark:bg-gray-800/50 flex flex-row justify-between items-center gap-2">
+        <CardTitle className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           Live Preview
           <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-0.5 rounded-full text-xs font-medium">
             {files.length}
           </span>
-        </h3>
-      </div>
+        </CardTitle>
+      </CardHeader>
       
-      <div className="overflow-x-auto flex-grow">
-        <table className="w-full text-left border-collapse">
-          <thead className="bg-gray-50/50 dark:bg-gray-800/50 sticky top-0 z-10 backdrop-blur">
-            <tr>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider border-b border-gray-200 dark:border-gray-700">
+      <CardContent className="p-0 overflow-x-auto flex-grow">
+        <Table className="w-full text-left border-collapse">
+          <TableHeader className="bg-gray-50/50 dark:bg-gray-800/50 sticky top-0 z-10 backdrop-blur">
+            <TableRow>
+              <TableHead className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                 Original Name
-              </th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider border-b border-gray-200 dark:border-gray-700">
+              </TableHead>
+              <TableHead className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                 New Name
-              </th>
-              <th className="px-4 py-3 w-10 border-b border-gray-200 dark:border-gray-700"></th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+              </TableHead>
+              <TableHead className="px-4 py-3 w-12"></TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
             {files.map((file) => {
               const isDuplicate = nameCounts[file.newName] > 1;
               const hasChanged = file.originalName !== file.newName;
 
               return (
-                <tr key={file.id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                  <td className="px-4 py-3 text-sm text-gray-600 dark:text-gray-400 font-mono truncate max-w-[200px] lg:max-w-[300px]">
+                <TableRow key={file.id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                  <TableCell className="px-4 py-3 text-sm text-gray-600 dark:text-gray-400 font-mono truncate max-w-[200px] lg:max-w-[300px]">
                     {file.originalName}
-                  </td>
-                  <td className="px-4 py-3 text-sm font-mono truncate max-w-[200px] lg:max-w-[300px]">
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-sm font-mono truncate max-w-[200px] lg:max-w-[300px]">
                     <span 
                       className={`
                         px-1.5 py-0.5 rounded
@@ -71,26 +76,29 @@ export default function Preview({ files, onRemove }: PreviewProps) {
                       {file.newName}
                     </span>
                     {isDuplicate && (
-                      <span className="ml-2 text-xs text-red-500 font-sans" title="Multiple files will have this exact same name">
-                        ⚠️ Conflict
+                      <span className="ml-2 inline-flex items-center gap-1 text-xs text-red-500 font-sans" title="Multiple files will have this exact same name">
+                        <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
+                        Conflict
                       </span>
                     )}
-                  </td>
-                  <td className="px-4 py-3 text-right">
-                    <button
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-right">
+                    <Button
+                      variant="ghost"
+                      size="icon"
                       onClick={() => onRemove(file.id)}
-                      className="text-gray-400 hover:text-red-500 transition-colors p-1 rounded hover:bg-red-50 dark:hover:bg-red-900/20"
+                      className="text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 h-8 w-8"
                       aria-label={`Remove ${file.originalName}`}
                     >
                       <Trash2 className="w-4 h-4" />
-                    </button>
-                  </td>
-                </tr>
+                    </Button>
+                  </TableCell>
+                </TableRow>
               );
             })}
-          </tbody>
-        </table>
-      </div>
-    </div>
+          </TableBody>
+        </Table>
+      </CardContent>
+    </Card>
   );
 }

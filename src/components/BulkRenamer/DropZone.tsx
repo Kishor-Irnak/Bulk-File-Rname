@@ -98,7 +98,7 @@ export default function DropZone({ onFilesAdded, filesCount }: DropZoneProps) {
           </p>
         </div>
         {filesCount > 0 && (
-          <div className="inline-flex items-center gap-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-medium">
+          <div className="inline-flex items-center gap-1.5 bg-zinc-100 text-zinc-800 px-3 py-1 rounded-full text-xs font-medium border border-zinc-200">
             <FileIcon className="w-3.5 h-3.5" />
             {filesCount} file{filesCount !== 1 ? 's' : ''} loaded
           </div>

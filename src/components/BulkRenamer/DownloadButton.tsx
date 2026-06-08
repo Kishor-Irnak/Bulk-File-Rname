@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Download, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { FileItem } from '@/types';
@@ -61,17 +62,10 @@ export default function DownloadButton({ files }: DownloadButtonProps) {
   };
 
   return (
-    <button
+    <Button
       onClick={handleDownload}
       disabled={files.length === 0 || isZipping}
-      className={`
-        w-full py-3 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-200
-        ${
-          files.length === 0
-            ? 'bg-gray-100 text-gray-400 cursor-not-allowed dark:bg-gray-800 dark:text-gray-500'
-            : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-md hover:scale-[1.01] active:scale-[0.99]'
-        }
-      `}
+      className="w-full py-3 h-11 font-semibold flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow-md transition-all duration-200"
     >
       {isZipping ? (
         <>
@@ -84,6 +78,6 @@ export default function DownloadButton({ files }: DownloadButtonProps) {
           Download All (ZIP)
         </>
       )}
-    </button>
+    </Button>
   );
 }

@@ -8,6 +8,8 @@ import DownloadButton from './DownloadButton';
 import { FileItem, RenameSettings, defaultSettings } from '@/types';
 import { processNames } from '@/lib/rename';
 import { RefreshCcw, ShieldCheck } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function BulkRenamer() {
   const [files, setFiles] = useState<FileItem[]>([]);
@@ -83,30 +85,35 @@ export default function BulkRenamer() {
         {/* Left Column: Rules & Actions */}
         <div className="w-full lg:w-[380px] xl:w-[400px] flex-shrink-0 flex flex-col gap-6 order-2 lg:order-1">
           {files.length > 0 && (
-            <div className="flex items-center justify-between bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 rounded-xl shadow-sm">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                {files.length} file{files.length !== 1 ? 's' : ''} loaded
-              </span>
-              <button
-                onClick={handleClear}
-                className="text-sm flex items-center gap-1.5 text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 font-medium transition-colors p-1"
-                aria-label="Clear all files and settings"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                Clear All
-              </button>
-            </div>
+            <Card>
+              <CardContent className="flex items-center justify-between py-3 px-4">
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  {files.length} file{files.length !== 1 ? 's' : ''} loaded
+                </span>
+                <Button
+                  variant="ghost"
+                  onClick={handleClear}
+                  className="text-xs flex items-center gap-1.5 text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 font-medium h-auto p-1.5"
+                  aria-label="Clear all files and settings"
+                >
+                  <RefreshCcw className="w-4 h-4" />
+                  Clear All
+                </Button>
+              </CardContent>
+            </Card>
           )}
 
           <RenameRules settings={settings} onChange={handleSettingsChange} />
           
-          <div className="w-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 rounded-xl shadow-sm">
-             <DownloadButton files={files} />
-             <div className="mt-4 flex items-center justify-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 font-medium">
-               <ShieldCheck className="w-4 h-4 text-green-500" />
-               100% Private - Files never leave your browser
-             </div>
-          </div>
+          <Card>
+            <CardContent className="p-5">
+               <DownloadButton files={files} />
+               <div className="mt-4 flex items-center justify-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 font-medium">
+                 <ShieldCheck className="w-4 h-4 text-green-500" />
+                 100% Private - Files never leave your browser
+               </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Right Column: Dropzone & Preview */}

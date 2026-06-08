@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import BulkRenamer from '@/components/BulkRenamer';
-import { UploadCloud, Settings2, Download, ShieldCheck, Zap, Smartphone, FolderSync } from 'lucide-react';
+import { UploadCloud, Settings2, Download, ShieldCheck, Zap, Smartphone, FolderSync, Gift, Camera, Code2, Film, FolderOpen } from 'lucide-react';
 import JsonLd from '@/components/seo/JsonLd';
 
 export default function Home() {
@@ -35,14 +35,13 @@ export default function Home() {
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-medium text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-green-500" /> 100% Private</span>
           <span className="flex items-center gap-1.5"><Zap className="w-4 h-4 text-yellow-500" /> Instant</span>
-          <span className="flex items-center gap-1.5"><span className="text-lg">🆓</span> Free Forever</span>
+          <span className="flex items-center gap-1.5"><Gift className="w-4 h-4 text-emerald-500" /> Free Forever</span>
           <span className="flex items-center gap-1.5"><Smartphone className="w-4 h-4 text-blue-500" /> Works on Mobile</span>
         </div>
       </section>
 
       {/* 2. THE TOOL COMPONENT */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-900/50 border-y border-gray-200 dark:border-gray-800 relative">
-        <div className="absolute inset-0 bg-blue-500/5 dark:bg-blue-500/10 pointer-events-none" />
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-y border-gray-200 relative">
         <div className="text-center mb-8 relative">
           <h2 className="text-sm font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
             Try it now — drag your files below
@@ -122,25 +121,33 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Who uses BulkRenameTool?</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
-            <div className="text-3xl mb-4">📸</div>
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+            <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-5 border border-blue-100/50 dark:border-blue-800/30">
+              <Camera className="w-6 h-6" />
+            </div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Photographers</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Rename massive batches of RAW and JPGs from generic IMG_1234 formats into descriptive names.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Rename massive batches of RAW and JPGs from generic IMG_1234 formats into descriptive names.</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
-            <div className="text-3xl mb-4">💻</div>
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+            <div className="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-5 border border-purple-100/50 dark:border-purple-800/30">
+              <Code2 className="w-6 h-6" />
+            </div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Developers</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Quickly clean up component names, apply snake_case to assets, and prepare files for production.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Quickly clean up component names, apply snake_case to assets, and prepare files for production.</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
-            <div className="text-3xl mb-4">🎬</div>
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+            <div className="w-12 h-12 rounded-xl bg-pink-50 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 flex items-center justify-center mb-5 border border-pink-100/50 dark:border-pink-800/30">
+              <Film className="w-6 h-6" />
+            </div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Content Creators</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Organize video clips and audio stems systematically with prepended project ID codes.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Organize video clips and audio stems systematically with prepended project ID codes.</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
-            <div className="text-3xl mb-4">📂</div>
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+            <div className="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-5 border border-amber-100/50 dark:border-amber-800/30">
+              <FolderOpen className="w-6 h-6" />
+            </div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Office Workers</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Add correct dates and consistent company prefixes to all scanned PDF receipts and documents.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Add correct dates and consistent company prefixes to all scanned PDF receipts and documents.</p>
           </div>
         </div>
       </section>
@@ -193,7 +200,7 @@ export default function Home() {
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
             <span className="text-xs font-medium text-blue-600 dark:text-blue-400 mb-3">4 min read</span>
             <Link href="/blog/bulk-rename-files-for-photographers" className="flex-grow">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 line-clamp-2 hover:text-blue-600 transition-colors">Bulk Rename Photos Online: A Photographer's Guide</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 line-clamp-2 hover:text-blue-600 transition-colors">Bulk Rename Photos Online: A Photographer&apos;s Guide</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-3 mb-6">Stop renaming IMG_1234.jpg one by one. Batch rename hundreds of photos in seconds. Free tool.</p>
             </Link>
             <div className="text-sm font-medium text-gray-900 dark:text-white mt-auto">Read more →</div>
