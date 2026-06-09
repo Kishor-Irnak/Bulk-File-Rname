@@ -89,23 +89,21 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-C2KS36YS9B"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
+            gtag('config', 'G-C2KS36YS9B');
+          `}
+        </Script>
+        {/* End Google Analytics */}
         {/* Placeholder for Google AdSense - add script tag here in the future if needed */}
         {/* <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXX" crossOrigin="anonymous" strategy="afterInteractive" /> */}
         
