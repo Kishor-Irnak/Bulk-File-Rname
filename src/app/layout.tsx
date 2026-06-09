@@ -12,10 +12,10 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 export const metadata: Metadata = {
   metadataBase: new URL('https://bulkrenametool.com'),
   title: {
-    default: 'Bulk Rename Files Online Free | BulkRenameTool',
+    default: 'Free Bulk Rename Files Online | BulkRenameTool',
     template: '%s | BulkRenameTool'
   },
-  description: 'Free online bulk file renamer. Add prefix, suffix, auto-number, find & replace in 100s of files instantly. No upload. No signup. Works in browser.',
+  description: 'Rename hundreds of files at once in your browser instantly. Add prefixes, suffixes, auto-number, find & replace. 100% free. No software download. No signup required.',
   keywords: [
     'bulk rename files online', 'batch rename tool', 
     'rename multiple files', 'bulk file renamer',
@@ -61,7 +61,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://bulkrenametool.com'
   },
-  manifest: '/manifest.json'
+  manifest: '/manifest.json',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  }
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
