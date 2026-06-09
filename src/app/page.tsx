@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import BulkRenamer from '@/components/BulkRenamer';
-import { UploadCloud, Settings2, Download, ShieldCheck, Zap, Smartphone, FolderSync, Gift, Camera, Code2, Film, FolderOpen } from 'lucide-react';
+import { UploadCloud, Settings2, Download, ShieldCheck, Zap, Smartphone, Gift, Camera, Code2, Film, FolderOpen } from 'lucide-react';
 import JsonLd from '@/components/seo/JsonLd';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6 animate-fade-in">
-          <FolderSync className="w-4 h-4" />
+          <img src="/favicon-32x32.png" alt="" className="w-4 h-4" />
           The fastest way to bulk rename files online
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 dark:text-white mb-6">

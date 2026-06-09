@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { FolderSync } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,7 +9,7 @@ export default function Footer() {
           {/* Column 1 — Brand */}
           <div className="space-y-4 flex flex-col md:col-span-1">
             <Link href="/" className="flex items-center gap-2" aria-label="BulkRenameTool — Free Bulk File Renamer">
-              <FolderSync className="w-6 h-6 text-blue-600 dark:text-blue-500" />
+              <img src="/apple-touch-icon.png" alt="" className="w-6 h-6 rounded-md" />
               <span className="font-semibold text-xl tracking-tight text-gray-900 dark:text-white">
                 BulkRenameTool
               </span>
