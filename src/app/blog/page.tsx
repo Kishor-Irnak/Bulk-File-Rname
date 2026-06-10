@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { blogPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
-  title: 'File Renaming Guides & Tips',
-  description: 'Guides, tutorials, and tips on bulk renaming files online. Learn how to batch rename photos, rename 100 files at once, and use regex for file renaming — all free.',
+  title: 'Bulk Rename Files: Guides & Tips',
+  description: 'Guides and tutorials on bulk renaming files online. Learn to batch rename photos, rename 100+ files at once, use regex, and more. All free, no software needed.',
   alternates: {
     canonical: 'https://bulkrenametool.com/blog'
   }

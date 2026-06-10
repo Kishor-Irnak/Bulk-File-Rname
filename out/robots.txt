@@ -1,7 +1,7 @@
-User-agent: *
+User-Agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
-Disallow: /404
 
+Host: https://bulkrenametool.com
 Sitemap: https://bulkrenametool.com/sitemap.xml

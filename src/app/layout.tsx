@@ -12,10 +12,10 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 export const metadata: Metadata = {
   metadataBase: new URL('https://bulkrenametool.com'),
   title: {
-    default: 'Free Bulk Rename Files Online | BulkRenameTool',
+    default: 'Free Bulk File Renamer Online | BulkRenameTool',
     template: '%s | BulkRenameTool'
   },
-  description: 'Rename hundreds of files at once in your browser instantly. Add prefixes, suffixes, auto-number, find & replace. 100% free. No software download. No signup required.',
+  description: 'Rename hundreds of files at once in your browser. Add prefixes, suffixes, auto-number, find & replace. 100% free. No software. No signup.',
   keywords: [
     'bulk rename files online', 'batch rename tool', 
     'rename multiple files', 'bulk file renamer',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://bulkrenametool.com',
     siteName: 'BulkRenameTool',
-    title: 'Bulk Rename Files Online — Free, Fast & Private',
+    title: 'Free Bulk File Renamer Online | BulkRenameTool',
     description: 'Rename hundreds of files at once in your browser. No software, no signup, 100% free.',
     images: [{
       url: '/og-image.png',
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bulk Rename Files Online — Free & Private',
-    description: 'Rename 100s of files at once in your browser. No upload needed.',
+    title: 'Free Bulk File Renamer Online | BulkRenameTool',
+    description: 'Rename hundreds of files at once in your browser. No software, no signup, 100% free.',
     images: ['/og-image.png']
   },
   robots: {
@@ -54,9 +54,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1
     }
-  },
-  verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
   },
   alternates: {
     canonical: 'https://bulkrenametool.com'

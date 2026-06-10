@@ -12,12 +12,12 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6 animate-fade-in">
-          <img src="/favicon-32x32.png" alt="" className="w-4 h-4" />
+          <img src="/favicon-32x32.png" alt="BulkRenameTool icon" className="w-4 h-4" />
           The fastest way to bulk rename files online
         </div>
+        {/* Primary H1 — exact match for target keyword */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 dark:text-white mb-6">
-          Bulk Rename Files Online <br className="hidden md:block"/>
-          <span className="text-gray-500 dark:text-gray-400 font-normal">— Free, Fast &amp; Private</span>
+          Bulk Rename Files Online Free
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
           Rename hundreds of files at once in your browser. Add prefixes, suffixes, auto-numbering, and find &amp; replace. No software download required. Files never leave your device.
@@ -52,10 +52,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. INTRO — keyword-rich body text, first 100 words contain primary keyword */}
+      {/* 3. INTRO — keyword-rich body text */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-          <strong>BulkRenameTool</strong> is the fastest free bulk rename tool for files online — no software download ever required. Whether you&apos;re a photographer renaming 500 RAW photos from a shoot, a developer cleaning up project assets, or an office worker standardizing invoice PDFs, our <strong>free bulk file renamer</strong> makes it instant. Add prefixes, suffixes, auto-number files sequentially, find &amp; replace text, convert case — all processed in your browser. Your files never leave your device. 100% private. 100% free. Try the batch rename tool above to see how easy it is to rename files in bulk.
+          <strong>BulkRenameTool</strong> is the fastest free <strong>bulk rename tool</strong> for files online — no software download ever required. Whether you&apos;re a photographer renaming 500 RAW photos from a shoot, a developer cleaning up project assets, or an office worker standardizing invoice PDFs, our <strong>free bulk file renamer</strong> makes it instant. Add prefixes, suffixes, auto-number files sequentially, find &amp; replace text, convert case — all processed in your browser. Your files never leave your device. 100% private. 100% free. Try the <strong>batch rename tool</strong> above to see how easy it is to rename files in bulk.
         </p>
       </section>
 
@@ -225,7 +225,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. FAQ (for SEO rich snippets) */}
+      {/* 8. SEO CONTENT SECTIONS — keyword targeting for specific file type & platform searches */}
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-gray-200 dark:border-gray-800">
+        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4 text-center">What is Bulk File Renaming?</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            <strong>Bulk file renaming</strong> — also called <em>batch renaming</em> or <em>mass renaming</em> — is the process of renaming multiple files simultaneously using a set of rules. Instead of clicking each file and typing a new name one at a time, you define a pattern (like &ldquo;add the prefix <em>2024_</em> to all files&rdquo;) and apply it across an entire folder at once.
+          </p>
+          <p>
+            Modern browsers are powerful enough to perform bulk file renaming entirely client-side using the <strong>Web File API</strong>, which means no upload to any server is required. BulkRenameTool uses this technology to give you native desktop-speed renaming, completely free, directly in your browser tab.
+          </p>
+          <p>
+            Common use cases include: renaming exported photos from a camera (e.g., <code>IMG_0001.jpg</code> → <code>client_shoot_001.jpg</code>), standardizing web assets (e.g., converting all filenames to <code>kebab-case</code>), and organizing batches of scanned documents with a consistent date prefix.
+          </p>
+        </div>
+
+        {/* Bulk Rename JPG Files */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Bulk Rename JPG Files</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            Need to <strong>bulk rename JPG files</strong>? BulkRenameTool handles JPEG and JPG images natively — just drag your entire photo folder into the drop zone. Whether you have 10 or 10,000 JPG files, you can apply a prefix like a date (<code>2024-06-01_</code>), strip the camera&apos;s generic prefix (<code>IMG_</code>), and add sequential numbers with 3-digit padding — all at the same time. The live preview shows every <code>.jpg</code> file&apos;s new name before you download.
+          </p>
+          <p>
+            This is especially useful for photographers delivering galleries — turn <code>DSC00123.JPG</code> into <code>2024_Smith_Wedding_001.jpg</code> across 600 files in under 30 seconds.
+          </p>
+        </div>
+
+        {/* Bulk Rename PNG Files */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Bulk Rename PNG Files and Web Assets</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            Web developers and UI/UX designers frequently need to <strong>bulk rename PNG files</strong> to web-safe filenames. Filenames with spaces, capital letters, or special characters cause broken image paths on Linux servers and in web apps. BulkRenameTool&apos;s <strong>case conversion</strong> options — including <code>kebab-case</code> and <code>snake_case</code> — instantly normalize all your <code>.png</code>, <code>.svg</code>, and <code>.webp</code> assets.
+          </p>
+          <p>
+            Example: <code>Header Image V2 FINAL.png</code> becomes <code>header-image-v2-final.png</code> across your entire design handoff ZIP in one click.
+          </p>
+        </div>
+
+        {/* Bulk Rename Files on Windows */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Bulk Rename Files on Windows (No Software Required)</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            If you need to <strong>bulk rename files on Windows</strong>, you have three native options — and they all fall short. <strong>File Explorer (F2)</strong> lets you multi-select and rename, but only adds a sequential number — no prefix control, no find &amp; replace. <strong>PowerToys PowerRename</strong> is excellent but requires downloading the 80MB+ PowerToys suite and admin rights. <strong>PowerShell scripts</strong> work but require command-line knowledge.
+          </p>
+          <p>
+            BulkRenameTool is the fourth option: a <strong>free, instant, browser-based batch rename tool for Windows</strong> with no installation, no admin rights, and no command line needed. Open Chrome or Edge, drag in your files, and rename them in seconds. Works on Windows 10 and Windows 11.
+          </p>
+          <p>
+            <Link href="/blog/batch-rename-windows-alternative" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">Read the full comparison: online batch rename tool vs desktop alternatives →</Link>
+          </p>
+        </div>
+
+        {/* Bulk Rename Files on Mac */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Bulk Rename Files on Mac</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            macOS Finder has a built-in batch rename feature (right-click → Rename Items), but it only supports basic text replacement and number addition — no regex, no case conversion, and no live preview. For anything more complex, Mac users traditionally needed to download a third-party app.
+          </p>
+          <p>
+            BulkRenameTool runs perfectly in Safari and Chrome on macOS and requires zero installation. Every advanced renaming feature — regex find &amp; replace, full case conversion, prefix/suffix, and sequential numbering with custom padding — is available immediately. It&apos;s the fastest way to <strong>bulk rename files on Mac</strong> without any software.
+          </p>
+        </div>
+
+        {/* Add Prefix / Suffix */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Add Prefix or Suffix to Multiple Filenames</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            The simplest and most common bulk rename task is <strong>adding a prefix or suffix to filenames</strong>. A prefix is text added to the <em>beginning</em> of a filename; a suffix is text added before the file extension. With BulkRenameTool, you can add both simultaneously:
+          </p>
+          <ul>
+            <li><strong>Add prefix:</strong> Type <code>2024_project_</code> → every file becomes <code>2024_project_report.pdf</code>, <code>2024_project_invoice.pdf</code>, etc.</li>
+            <li><strong>Add suffix:</strong> Type <code>_final</code> → every file becomes <code>report_final.pdf</code>, <code>invoice_final.pdf</code>, etc.</li>
+            <li><strong>Both at once:</strong> Add <code>2024_</code> as prefix and <code>_v1</code> as suffix to get <code>2024_report_v1.pdf</code>.</li>
+          </ul>
+          <p>The live preview updates in real time so you can verify every filename before downloading the ZIP.</p>
+        </div>
+
+        {/* Remove Spaces */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Remove Spaces from Filenames</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            Spaces in filenames cause headaches for web servers, shell scripts, and cloud storage systems. A file named <code>My Document Final.pdf</code> becomes <code>My%20Document%20Final.pdf</code> in a URL — ugly and error-prone. To <strong>remove spaces from filenames</strong> in bulk, use Find &amp; Replace: set Find to a space (<code> </code>), and Replace with a hyphen (<code>-</code>) or underscore (<code>_</code>). Apply across all files in one click.
+          </p>
+          <p>
+            Alternatively, use the <strong>kebab-case</strong> conversion to simultaneously remove spaces <em>and</em> lowercase all letters — the safest format for web-facing files.
+          </p>
+        </div>
+
+        {/* Free vs Paid */}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-14 mb-4">Free vs Paid Bulk Rename Tools</h2>
+        <div className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+          <p>
+            Several paid desktop applications (like <em>A-PDF Rename</em> or various commercial batch rename utilities) charge $20–$50 for features that BulkRenameTool provides completely free. The key advantage of paid desktop tools is offline availability and deep OS integration — but for the vast majority of renaming tasks, a browser-based tool is equally capable and vastly more convenient.
+          </p>
+          <p>
+            BulkRenameTool covers every renaming scenario that makes up 95% of real-world use: prefix/suffix, find &amp; replace (with regex), auto-numbering, and case conversion. All for free. All without installing anything.
+          </p>
+        </div>
+      </section>
+
+      {/* 9. FAQ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto border-t border-gray-200 dark:border-gray-800">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Frequently Asked Questions About Bulk Renaming</h2>
@@ -281,7 +380,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. BLOG PREVIEW SECTION */}
+      {/* 10. BLOG PREVIEW SECTION */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50 dark:bg-gray-900/30 rounded-3xl mb-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
@@ -321,7 +420,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. FINAL CTA */}
+      {/* 11. FINAL CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-10 md:p-16 text-center shadow-xl">
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">Ready to bulk rename your files?</h2>

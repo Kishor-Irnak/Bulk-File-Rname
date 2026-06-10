@@ -4,11 +4,12 @@ type BlogJsonLdProps = {
   title: string;
   description: string;
   publishedDate: string;  // ISO 8601
+  modifiedDate?: string;  // ISO 8601, defaults to publishedDate
   url: string;
   readTime?: string;
 };
 
-export default function BlogJsonLd({ title, description, publishedDate, url, readTime }: BlogJsonLdProps) {
+export default function BlogJsonLd({ title, description, publishedDate, modifiedDate, url, readTime }: BlogJsonLdProps) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -16,7 +17,7 @@ export default function BlogJsonLd({ title, description, publishedDate, url, rea
     "description": description,
     "url": url,
     "datePublished": publishedDate,
-    "dateModified": "2026-06-09T00:00:00Z",
+    "dateModified": modifiedDate || publishedDate,
     "author": {
       "@type": "Organization",
       "name": "BulkRenameTool",
@@ -28,12 +29,20 @@ export default function BlogJsonLd({ title, description, publishedDate, url, rea
       "url": "https://bulkrenametool.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://bulkrenametool.com/android-chrome-512x512.png"
+        "url": "https://bulkrenametool.com/android-chrome-512x512.png",
+        "width": 512,
+        "height": 512
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": url
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://bulkrenametool.com/og-image.png",
+      "width": 1200,
+      "height": 630
     },
     "timeRequired": readTime ? `PT${readTime.replace(' min read', 'M')}` : undefined
   };

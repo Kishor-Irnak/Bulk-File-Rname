@@ -17,6 +17,7 @@ export default function Post() {
       description="Rename 500 photos at once without manual work. Bulk rename for photographers with batch numbering, date formatting, and prefix/suffix. Free. No signup."
       date="January 5, 2024"
       publishedDate="2024-01-05T00:00:00Z"
+      modifiedDate="2026-06-10T00:00:00Z"
       readTime="6 min read"
       slug="bulk-rename-files-for-photographers"
     >
@@ -53,7 +54,7 @@ export default function Post() {
 
       <h2>How to Bulk Rename Photos with BulkRenameTool</h2>
       <p>
-        Using our <a href="/">free bulk photo rename tool</a>, you can achieve a perfect naming convention in about 15 seconds:
+        Using our <a href="/">free bulk rename files online tool</a>, you can achieve a perfect naming convention in about 15 seconds:
       </p>
       <ol>
         <li>Drag all your exported JPGs or RAW files into the drop zone at the top of the page.</li>
@@ -96,7 +97,7 @@ export default function Post() {
         As a professional photographer, you cannot upload unreleased client photos to random internet servers. Privacy is non-negotiable. That is exactly why BulkRenameTool is built entirely on client-side browser technology. Your photos are <strong>never uploaded</strong>. Zero network requests are made with your files. The rename and ZIP happens locally in your browser using the Web File API. Learn more in our <a href="/privacy">privacy policy</a>.
       </p>
       <p>
-        Ready to try batch photo renaming? Use our <a href="/">free bulk rename tool for photographers</a> — no account needed, no software to install, completely free.
+        Ready to try batch photo renaming? Use our <a href="/">bulk rename tool for photographers</a> — no account needed, no software to install, completely free. Or try the <a href="/">batch file renamer</a> to rename any file type in bulk.
       </p>
     </BlogLayout>
   );

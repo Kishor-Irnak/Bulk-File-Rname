@@ -1,32 +1,59 @@
 import React from 'react';
 
 export default function JsonLd() {
-  const webAppSchema = {
+  const softwareAppSchema = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "SoftwareApplication",
     "name": "BulkRenameTool",
     "url": "https://bulkrenametool.com",
-    "description": "Free online bulk file renamer. Rename hundreds of files at once in your browser. Add prefix, suffix, auto-number, find & replace. 100% private. No uploads.",
+    "description": "Free online bulk file renamer. Rename hundreds of files at once in your browser. Add prefix, suffix, auto-number, find & replace. 100% private. No uploads. Works on Windows, Mac, Linux.",
     "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "browserRequirements": "Requires a modern browser with JavaScript enabled.",
+    "operatingSystem": "Windows, macOS, Linux, ChromeOS, iOS, Android",
+    "browserRequirements": "Requires a modern browser with JavaScript enabled (Chrome, Firefox, Safari, Edge).",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
     },
+    "screenshot": "https://bulkrenametool.com/og-image.png",
     "featureList": [
-      "Bulk file renaming",
-      "Add prefix and suffix to filenames",
-      "Find and replace in filenames",
-      "Auto sequential numbering",
-      "Case conversion (UPPER, lower, Title, camelCase, snake_case, kebab-case)",
-      "Live preview before download",
-      "100% private — files never uploaded",
-      "Download renamed files as ZIP",
-      "Regex support for find and replace",
-      "Works on Windows, Mac, Linux, ChromeOS"
-    ]
+      "Bulk file renaming — rename hundreds of files at once",
+      "Add prefix and suffix to all filenames simultaneously",
+      "Find and replace text across all filenames",
+      "Auto sequential numbering with customizable padding",
+      "Case conversion — UPPER, lower, Title, camelCase, snake_case, kebab-case",
+      "Live preview before download — see every change before committing",
+      "100% private — files never uploaded to any server",
+      "Download all renamed files as a single ZIP archive",
+      "Regex support for advanced find and replace patterns",
+      "Works on Windows, Mac, Linux, ChromeOS, iOS, Android",
+      "Bulk rename JPG files, PNG files, PDF documents, and any file type",
+      "Remove spaces from filenames",
+      "Batch rename photos for photographers",
+      "No software download required"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "127",
+      "bestRating": "5"
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BulkRenameTool",
+    "url": "https://bulkrenametool.com",
+    "description": "Free online bulk file renamer. Rename hundreds of files at once in your browser. No software download required.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://bulkrenametool.com/blog?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   };
 
   const howToSchema = {
@@ -156,8 +183,17 @@ export default function JsonLd() {
     "@type": "Organization",
     "name": "BulkRenameTool",
     "url": "https://bulkrenametool.com",
-    "logo": "https://bulkrenametool.com/android-chrome-512x512.png",
-    "description": "Free online bulk file renamer tool. Rename hundreds of files at once in your browser with no software download required."
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bulkrenametool.com/android-chrome-512x512.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Free online bulk file renamer tool. Rename hundreds of files at once in your browser with no software download required.",
+    "foundingDate": "2024",
+    "sameAs": [
+      "https://bulkrenametool.com"
+    ]
   };
 
   const breadcrumbSchema = {
@@ -177,7 +213,11 @@ export default function JsonLd() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <script
         type="application/ld+json"

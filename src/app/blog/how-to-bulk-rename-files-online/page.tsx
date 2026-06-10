@@ -17,6 +17,7 @@ export default function Post() {
       description="Learn how to bulk rename files online in 3 simple steps. Add prefix, suffix, auto-number, find & replace. Works on Windows, Mac. Free online tool. No software download."
       date="January 1, 2024"
       publishedDate="2024-01-01T00:00:00Z"
+      modifiedDate="2026-06-10T00:00:00Z"
       readTime="5 min read"
       slug="how-to-bulk-rename-files-online"
     >
@@ -37,7 +38,7 @@ export default function Post() {
 
       <h2>Step 1: Upload Your Files to the Bulk Rename Tool</h2>
       <p>
-        Navigate to our <a href="/">free bulk rename tool homepage</a>. You can either drag and drop an entire folder of files directly onto the drop zone, or click the drop zone to open your system&apos;s file browser and select multiple files. Once loaded, you will see a live preview table listing every file with its current filename on the left.
+        Navigate to our <a href="/">free bulk rename files online tool</a>. You can either drag and drop an entire folder of files directly onto the drop zone, or click the drop zone to open your system&apos;s file browser and select multiple files. Once loaded, you will see a live preview table listing every file with its current filename on the left.
       </p>
       <p>
         There is no limit to how many files you can load at once. Whether you are renaming 10 files or renaming 1000 files, the tool handles it without slowing down — because all processing uses your local CPU and RAM, not a server connection.
@@ -80,7 +81,7 @@ export default function Post() {
         When batch renaming files, always use sufficient padding in your auto-numbering. If you have 150 files and only use 1-digit padding (1, 2, 3...), files will sort incorrectly in your file system — you will get <code>1, 10, 100, 11, 12</code> instead of <code>001, 002, 003</code>. Use at least 3 digits of padding for any batch over 100 files, and 4 digits for batches over 1000.
       </p>
       <p>
-        Ready to try it? Open the <a href="/">free bulk file renamer</a> and drag in your files to get started in seconds — no signup, no software, 100% free.
+        Ready to try it? Open the <a href="/">bulk rename tool</a> and drag in your files to get started in seconds — no signup, no software, 100% free. BulkRenameTool is the fastest <a href="/">online file renamer</a> available — free forever, no account needed.
       </p>
     </BlogLayout>
   );

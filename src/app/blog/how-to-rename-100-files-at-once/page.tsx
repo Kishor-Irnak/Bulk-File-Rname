@@ -17,6 +17,7 @@ export default function Post() {
       description="Rename 100, 500, or 1000 files at once online. Sequential numbering, find & replace, case conversion. Free tool. All processing happens in your browser."
       date="January 15, 2024"
       publishedDate="2024-01-15T00:00:00Z"
+      modifiedDate="2026-06-10T00:00:00Z"
       readTime="5 min read"
       slug="how-to-rename-100-files-at-once"
     >
@@ -34,10 +35,10 @@ export default function Post() {
 
       <h2>How to Rename 100 Files at Once (Step-by-Step)</h2>
       <p>
-        To rename 100 files in under 10 seconds, follow these steps using our <a href="/">free online bulk rename tool</a>:
+        To rename 100 files in under 10 seconds, follow these steps using our <a href="/">free bulk rename files online tool</a>:
       </p>
       <ol>
-        <li>Go to the <a href="/">BulkRenameTool homepage</a>.</li>
+        <li>Go to the <a href="/">BulkRenameTool — bulk file renamer</a>.</li>
         <li>Drag all 100 files (or click to select them) into the drop zone.</li>
         <li>Look at the <strong>Rename Rules</strong> panel on the left.</li>
         <li>If you want to replace a specific string across all filenames, use <em>Find &amp; Replace</em>. Find: <code>inv-</code>, Replace: <code>Invoice_2024_</code>.</li>
@@ -86,10 +87,10 @@ export default function Post() {
 
       <h2>Why Use an Online Tool Instead of a Script?</h2>
       <p>
-        Writing a PowerShell or Bash script to rename files requires knowing the exact syntax, testing on a small sample first, and risking permanent mistakes if you get the pattern wrong. With our <a href="/">online bulk rename tool</a>, the live preview shows you exactly what every file will look like before you commit. You see the outcome before the outcome happens — eliminating the risk of mass renaming errors entirely.
+        Writing a PowerShell or Bash script to rename files requires knowing the exact syntax, testing on a small sample first, and risking permanent mistakes if you get the pattern wrong. With our <a href="/">bulk rename files online tool</a>, the live preview shows you exactly what every file will look like before you commit. You see the outcome before the outcome happens — eliminating the risk of mass renaming errors entirely.
       </p>
       <p>
-        Stop wasting time on manual renaming. Your time is too valuable for repetitive data entry. <a href="/">Open BulkRenameTool</a> and rename your files in bulk right now — for free.
+        Stop wasting time on manual renaming. Your time is too valuable for repetitive data entry. <a href="/">Open the free batch rename tool</a> and rename your files in bulk right now — for free, with no account needed.
       </p>
     </BlogLayout>
   );
