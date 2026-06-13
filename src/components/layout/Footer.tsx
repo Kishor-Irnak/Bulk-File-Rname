@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Defined at module level to prevent a React hydration mismatch:
+// during static export, the year is baked in at build time on both server and client.
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
@@ -9,7 +14,7 @@ export default function Footer() {
           {/* Column 1 — Brand */}
           <div className="space-y-4 flex flex-col md:col-span-1">
             <Link href="/" className="flex items-center gap-2" aria-label="BulkRenameTool — Free Bulk File Renamer">
-              <img src="/apple-touch-icon.png" alt="" className="w-6 h-6 rounded-md" />
+              <Image src="/apple-touch-icon.png" alt="" width={24} height={24} className="rounded-md" />
               <span className="font-semibold text-xl tracking-tight text-gray-900 dark:text-white">
                 BulkRenameTool
               </span>
@@ -107,7 +112,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} BulkRenameTool — Free Online Bulk File Renamer. All rights reserved.
+            © {currentYear} BulkRenameTool — Free Online Bulk File Renamer. All rights reserved.
           </p>
           <div className="flex gap-4 text-sm text-gray-500 dark:text-gray-400">
             <span>Free &amp; Private</span>

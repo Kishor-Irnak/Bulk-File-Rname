@@ -14,9 +14,14 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   transpilePackages: ['motion'],
+  experimental: {
+    // Tree-shake lucide-react and motion to only include icons/exports actually used.
+    // This can reduce the client bundle by 15–30% on icon-heavy pages.
+    optimizePackageImports: ['lucide-react', 'motion'],
+  },
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
-    // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
+    // Do not modify — file watching is disabled to prevent flickering during agent edits.
     if (dev && process.env.DISABLE_HMR === 'true') {
       config.watchOptions = {
         ignored: /.*/,

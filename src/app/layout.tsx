@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Geist } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Header from '@/components/layout/Header';
@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer';
 import Script from 'next/script';
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bulkrenametool.com'),
@@ -73,7 +73,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={cn("font-sans", geist.variable)} suppressHydrationWarning>
+      <head>
+        {/* Preconnect to critical third-party origins to speed up analytics loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">

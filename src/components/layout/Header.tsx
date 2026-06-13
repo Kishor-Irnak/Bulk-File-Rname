@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
@@ -20,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="BulkRenameTool Home">
-          <img src="/apple-touch-icon.png" alt="BulkRenameTool logo" className="w-6 h-6 rounded-md" />
+          <Image src="/apple-touch-icon.png" alt="BulkRenameTool logo" width={24} height={24} className="rounded-md" />
           <span className="font-semibold text-xl tracking-tight text-gray-900 dark:text-white">
             BulkRenameTool
           </span>
